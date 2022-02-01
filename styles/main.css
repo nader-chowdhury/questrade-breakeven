@@ -1,0 +1,43 @@
+:root {
+    background-color: rgb(30, 31, 32);
+}
+
+body {
+    display: grid;
+    grid-template-rows: 10% auto;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.left-shift {
+    margin-left: 10%;
+}
+
+.text-color {
+    color:honeydew;
+}
+
+h1 {
+    font-size: 15 px;
+}
+
+.btn {
+    background-color: transparent;
+    border-radius: 5px;
+    border-style: none;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    height: 4em;
+    min-width: 5%;
+    padding-bottom: 10px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    color: #4ab950;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
