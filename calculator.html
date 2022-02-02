@@ -17,9 +17,19 @@
             </div>
         </nav>
         <main>
-            <h1 class="text-color">Welcome</h1>
-            <a href="calculator.html"><button type="button" class="btn text-color">Calculate Breakeven Point for my stocks on Questrade.</button></a>
+            <form class="stock_form">
+                <input type="number" name="purchase_price">
+                <input type="number" name="quantity">
+                <select name="buy_transaction_type" id="">
+                    <option value="market">Market</option>
+                    <option value="limit">Limit</option>
+                </select>
+                <select name="sell_transaction_type" id="">
+                    <option value="market">Market</option>
+                    <option value="limit">Limit</option>
+                </select>
+                <input type="submit" class="btn text-color">
+            </form>
         </main>
-
     </body>
 </HTML>
