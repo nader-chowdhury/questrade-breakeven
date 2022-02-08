@@ -2,7 +2,7 @@
 <HTML>
     <header>
         <meta charset="UTF-8">
-        <script defer src="/scripts/calculator.js"></script>
+        <script defer type="module" src="/scripts/calculator.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
@@ -18,13 +18,14 @@
         </nav>
         <main>
             <form class="stock_form">
+                <input type="text" name="symbol">
                 <input type="number" name="purchase_price">
                 <input type="number" name="quantity">
-                <select name="buy_transaction_type" id="">
+                <select name="buy_type" id="">
                     <option value="market">Market</option>
                     <option value="limit">Limit</option>
                 </select>
-                <select name="sell_transaction_type" id="">
+                <select name="sell_type" id="">
                     <option value="market">Market</option>
                     <option value="limit">Limit</option>
                 </select>
