@@ -9,8 +9,9 @@ form.addEventListener("submit", (event) => {
     let stock = Stock(
         formData.get("symbol"), 
         formData.get("purchase_price"), 
-        formData.get("quantity"), 
-        formData.get("buy_type"),
-        formData.get("sell_type"));
-    stock.get_ecnFee();
-});
+        formData.get("quantity"),
+        [formData.get("buy_type"), formData.get("sell_type")],
+        formData.get("exchange")
+        );
+    }
+);

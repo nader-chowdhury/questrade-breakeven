@@ -1,19 +1,19 @@
-import { getExchange } from "./yahoo_api.js";
+import { getCommission } from "./total_trade_commissions.js";
+import { getECN } from "./total_ecn.js"
 
 export default function Stock (
     symbol, 
-    purchase_price, 
-    quantity, buy_type, 
-    sell_type)
+    price, 
+    quantity,
+    transactions,
+    exchange)
 {
-
-
+    let break_even_price = (getCommission(quantity, quote) + getECN(transactions, quantity, price, exchange)) / quantity;
     return {
         symbol, 
-        purchase_price, 
-        quantity, 
-        buy_type, 
-        sell_type,
+        price, 
+        quantity,
+        transactions,
         break_even_price
     }
 }
