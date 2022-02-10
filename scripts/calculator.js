@@ -14,10 +14,10 @@ form.addEventListener("submit", (event) => {
         formData.get("exchange"),
         formData.get("type"),
         );
-    let display_information = document.createElement("textarea");
-    display_information.setAttribute("readonly", "");
-    display_information.appendChild(
+    let display_price = document.createElement("textarea");
+    display_price.setAttribute("readonly", "");
+    display_price.appendChild(
         document.createTextNode(`${stock.break_even_price_formatted} or ${stock.break_even_price}`));
-    form.appendChild(display_information);
+    form.appendChild(display_price);
     }
 );

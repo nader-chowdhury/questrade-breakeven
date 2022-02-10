@@ -27,7 +27,7 @@ export default function Stock(
         break_even_price_formatted: new Intl.NumberFormat("en-US",{ 
             style: "currency",
             currency: "USD",})
-        .format(break_even_price),
+            .format(break_even_price),
         break_even_price
     }
 }
