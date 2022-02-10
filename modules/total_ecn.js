@@ -4,10 +4,13 @@ export function getECN(transactions, quantity, price, exchange){
     const ecn_table = { // This table stores the ecn fees per share based on exchanges/routes.
         removeLiquidity: {
             "TSX/CSE >= 1": 0.0035,
-            "TSX < 1": 0.0008,
-            "CSE < 1": 0.0012,
+            TSX: 0.0008,
+            CSE: 0.0012,
             NASDAQ: 0.003,
             NYSE: 0.004,
+            EDGX: 0.004,
+            MNGD: 0,
+            EDGA: 0,
         },
         addLiquidity: {
             EDGA: 0.004
@@ -30,35 +33,14 @@ export function getECN(transactions, quantity, price, exchange){
     }
     
     // Determine ecn fee per share according to exchange, then calculate total ecn
-    switch (exchange) {
-        case "tsx":
-            if (price < 1) {
-                ecn_per_share = ecn_table.removeLiquidity["TSX < 1"];
-            } else {
-                ecn_per_share = ecn_table.removeLiquidity["TSX/CSE >= 1"];
-            }
-            break;
-        case "cse":
-            if (price < 1) {
-                ecn_per_share = ecn_table.removeLiquidity["CSE < 1"]
-            } else {
-                ecn_per_share = ecn_table.removeLiquidity["TSX/CSE >= 1"];
-            }
-            break;
-        case "mngd":
-            return 0;
-        case "nasdaq":
-            ecn_per_share = ecn_table.removeLiquidity.NASDAQ;
-            break;
-        case "nyse":
-            ecn_per_share = ecn_table.removeLiquidity.NYSE;
-            break;
-        case "edgx":
-            ecn_per_share = ecn_table.removeLiquidity.NYSE;
-            break;
-        case "edga":
-            return 0;
+    if (exchange === "tsx" || exchange === "cse"){
+        if (price > 1) {
+            ecn_per_share = ecn_table.removeLiquidity["TSX/CSE >= 1"];
+        } else {
+            ecn_per_share = ecn_table.removeLiquidity[exchange.toUpperCase()];
+        }
+    } else {
+        ecn_per_share = ecn_table.removeLiquidity[exchange.toUpperCase()];
     }
-
     return ecn_per_share * quantity * ecn_factor;
 }
