@@ -5,7 +5,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="./styles/main.css">
         <title>About</title>
     </header>
     <body>
@@ -18,9 +18,40 @@
         <main>
             <h1 class="text-color">About</h1>
             <article class="text-color">
-                This website was made to provide a break even calculator for buying and selling stock on Questrade. Currently
-                the website supports only basic buy and sell transactions. The break even price is calculated using the cost information found on
-                Questrade's website.
+                <p>
+                    This website was made to provide a break even calculator for buying and selling stocks and/or ETFs on Questrade. Currently
+                    the website supports only basic buy and sell transactions. The break even price is calculated using the cost information found on
+                    Questrade's <a href="https://www.questrade.com/pricing/self-directed-commissions-plans-fees/transaction">website</a>.
+                </p>
+                <p>
+                    In order to find the break even price for a position, the calculator will determine the total cost of conducting a buy AND sell
+                    transaction.
+                </p>
+                <p>
+                    Transactions may incur an exchange, or ECN fee. This depends on what type of buy or sell order is being done or considered. When the order
+                    is a market order, than ECN fees will occur. If it is a limit order, than no fees occur unless the limit order is a marketable limit order.
+                    However, if the quantity of the order is not a multiple of 100, than ECN fees will occur regardless. ECN fees vary depending on the exchange
+                    and routes used for the transaction.
+				</p>
+                <p>
+                    Commissions are charged for each transaction whenever a stock is being bought and sold. For ETFs, commission is only charged on the sale.
+                    Commissions are decided based on the quantity, with a minimum commission of $4.95, maximum of $9.95. Quantities between 495 and 995 are charged
+                    $0.01 per share. Quantites lower are charged $4.95, and quantities higher are charged $9.95.
+
+                    <table>
+                        <caption>Commission charged per transaction</caption>
+                        <tr>
+                            <th>495 or less</th>
+                            <th>496 - 994</th>
+                            <th>995 or more</th>
+                        </tr>
+                        <tr>
+                            <th>$4.95</th>
+                            <th>$0.01 x Quantity</th>
+                            <th>$9.95</th>
+                        </tr>
+                    </table>
+                </p>
             </article>
         </main>
 

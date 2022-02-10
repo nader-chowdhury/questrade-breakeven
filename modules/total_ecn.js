@@ -7,7 +7,6 @@ export function getECN(transactions, quantity, price, exchange){
             "TSX < 1": 0.0008,
             "CSE < 1": 0.0012,
             NASDAQ: 0.003,
-            BATS: 0.004,
             NYSE: 0.004,
         },
         addLiquidity: {
