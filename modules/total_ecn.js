@@ -42,5 +42,6 @@ export function getECN(transactions, quantity, price, exchange){
     } else {
         ecn_per_share = ecn_table.removeLiquidity[exchange.toUpperCase()];
     }
+    
     return ecn_per_share * quantity * ecn_factor;
 }
