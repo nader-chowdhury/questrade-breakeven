@@ -1,4 +1,4 @@
-function getECN (transactions, quantity, price, exchange){
+export function getECN(transactions, quantity, price, exchange){
     let ecn_factor = 1; // This variable stores how many times an ecn fee is incurred, default assumes at least one market order
     let ecn_per_share = 0;
     const ecn_table = { // This table stores the ecn fees per share based on exchanges/routes.

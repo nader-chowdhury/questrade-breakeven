@@ -1,7 +1,7 @@
-export function getCommission(quantity, quote) {
+export function getCommission(quantity, type) {
 let commission_factor = 2;
 
-    if (quote.quoteType === "ETF") {
+    if (type === "etf") {
         commission_factor = 1;
     }
 

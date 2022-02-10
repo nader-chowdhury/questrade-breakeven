@@ -11,7 +11,9 @@ form.addEventListener("submit", (event) => {
         formData.get("purchase_price"), 
         formData.get("quantity"),
         [formData.get("buy_type"), formData.get("sell_type")],
-        formData.get("exchange")
+        formData.get("exchange"),
+        formData.get("type"),
         );
+    console.log(stock);
     }
 );
