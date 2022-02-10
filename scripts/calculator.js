@@ -17,7 +17,7 @@ form.addEventListener("submit", (event) => {
     let display_information = document.createElement("textarea");
     display_information.setAttribute("readonly", "");
     display_information.appendChild(
-        document.createTextNode(stock.break_even_price));
+        document.createTextNode(`${stock.break_even_price_formatted} or ${stock.break_even_price}`));
     form.appendChild(display_information);
     }
 );

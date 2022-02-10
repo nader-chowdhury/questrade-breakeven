@@ -24,9 +24,10 @@ export default function Stock(
         total_commission,
         total_ecn,
         total_cost,
-        break_even_price: new Intl.NumberFormat("en-US",{ 
+        break_even_price_formatted: new Intl.NumberFormat("en-US",{ 
             style: "currency",
             currency: "USD",})
         .format(break_even_price),
+        break_even_price
     }
 }
