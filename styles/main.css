@@ -1,9 +1,13 @@
-:root {
-    background-color: rgb(30, 31, 32);
+/* Universal Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     display: grid;
+    font-family: "Open Sans";
     grid-template-rows: 10% auto;
 }
 
@@ -16,11 +20,16 @@ main {
 }
 
 .text-color {
-    color:honeydew;
+    color:black;
 }
 
 h1 {
-    font-size: 15 px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 46px;
+}
+
+label {
+    font-weight: 600;
 }
 
 .btn {
