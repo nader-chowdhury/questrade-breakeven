@@ -1,12 +1,19 @@
 /* Universal Reset */
-* {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
-    display: grid;
+    display: flex;
+    box-sizing: border-box;
     font-family: "Open Sans";
     grid-template-rows: 10% auto;
 }
