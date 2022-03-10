@@ -19,6 +19,7 @@ html {
 
 body {
     display: flex;
+    height: 100vh;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -29,6 +30,14 @@ body {
 
 main {
     margin: 0 3rem;
+    flex-grow: 1;
+    justify-self: stretch;
+}
+
+footer {
+    font-family: "Roboto Slab", sans-serif;
+    background-color: #edf0f5;
+    text-align: center;
 }
 
 /* Navigation Bar/Buttons */
@@ -55,13 +64,14 @@ main {
 /* Form */
 form {
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 
 label {
-    margin-bottom: 2rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -69,7 +79,14 @@ label {
     align-self: center;
     border: 2px solid var(--primary-text-hover);
     padding: 1rem 3rem;
-    border-radius: 3rem;
-    font-weight: 700;
+    border-radius: 5px;
+    font-size: 5rem;
     color: var(--primary-text-hover);
+}
+
+/* Footer */
+.footer__text {
+    color: rgb(102, 102, 102); 
+    padding: 2rem 0;
+    border-top: 1px rgb(215, 215, 215) solid;
 }
