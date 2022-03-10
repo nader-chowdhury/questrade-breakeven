@@ -67,7 +67,7 @@ label {
 
 .breakeven-price__text {
     align-self: center;
-    border: 3px solid var(--primary-text-hover);
+    border: 2px solid var(--primary-text-hover);
     padding: 1rem 3rem;
     border-radius: 3rem;
     font-weight: 700;
