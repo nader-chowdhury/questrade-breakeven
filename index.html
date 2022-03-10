@@ -18,30 +18,30 @@
         </nav>
         <main>
             <form class="stock_form">
-                <label > Symbol:
+                <label> Symbol:
                     <input type="text" name="symbol">
                 </label>
-                <label > Purchase Price:
+                <label> Purchase Price:
                     <input type="number" step="0.01" name="purchase_price">
                 </label>
-                <label > Quantity:
+                <label> Quantity:
                     <input type="number" name="quantity">
                 </label>
-                <label > Transaction Type (Buy):
+                <label> Transaction Type (Buy):
                     <select name="buy_type" id="">
                         <option value="market">Market</option>
                         <option value="market">Marketable Limit Order</option>
                         <option value="limit">Limit</option>
                     </select>
                 </label>
-                <label > Transaction Type (Sell):
+                <label> Transaction Type (Sell):
                     <select name="sell_type" id="">
                         <option value="market">Market</option>
                         <option value="market">Marketable Limit Order</option>
                         <option value="limit">Limit</option>
                     </select>
                 </label>
-                <label > Select Exchange/Route:
+                <label> Select Exchange/Route:
                     <select name="exchange" id="">
                         <option value="tsx">TSX</option>
                         <option value="cse">CSE</option>
@@ -52,13 +52,13 @@
                         <option value="edga">EDGA</option>
                     </select>
                 </label>
-                <label > Select Investment Type:
+                <label> Select Investment Type:
                     <select name="type" id="">
                         <option value="stock">Stock</option>
                         <option value="etf">ETF</option>
                     </select>
                 </label>
-                <input type="submit" class="btn text-color">
+                <p class="breakeven-price__text">$0.00</p>
             </form>
         </main>
     </body>

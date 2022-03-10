@@ -1,8 +1,9 @@
 import Stock from "../modules/stock.js";
 
 let form = document.querySelector(".stock_form");
+let display_price = document.querySelector(".breakeven-price__text");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("change", (event) => {
     event.preventDefault();
     let formData = new FormData(document.querySelector(".stock_form"));
 
@@ -14,11 +15,6 @@ form.addEventListener("submit", (event) => {
         formData.get("exchange"),
         formData.get("type"),
         );
-    let display_price = document.createElement("textarea");
-    display_price.setAttribute("readonly", "");
-    display_price.appendChild(
-        document.createTextNode(`${stock.break_even_price_formatted} or ${stock.break_even_price}`)
-    );
-    form.appendChild(display_price);
+    display_price.textContent= `${stock.break_even_price_formatted} or ${stock.break_even_price}`;
     }
 );

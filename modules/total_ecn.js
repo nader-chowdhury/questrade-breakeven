@@ -18,13 +18,13 @@ export function getECN(transactions, quantity, price, exchange){
     }
 
     // Determines if an ecn fee should be incurred on the buy and/or sale of stocks
-    if (transactions.includes("market")) { // Check to see if there is "market" in transactions
+    if (quantity % 100 != 0){ // if non-marketable order (not multiple of 100), charge ecn both times
+        ecn_factor = 2;
+    } else if (transactions.includes("market")) { // Check to see if there is "market" in transactions
         if (transactions.every(
                 (transaction) => { return transaction === "market";})) { // if all orders are market, charge ecn both transactions, else only once
             ecn_factor = 2;
         }
-    } else if (quantity % 100 != 0){ // if non-marketable order (not multiple of 100), charge ecn both times
-        ecn_factor = 2;
     } else if (exchange === "edga") { // EDGA incurs ECN even if it adds liquidity 
         ecn_factor = 2;
         return ecn_table.addLiquidity.EDGA * quantity * ecn_factor; 

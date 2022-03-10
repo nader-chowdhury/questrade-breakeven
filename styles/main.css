@@ -4,7 +4,7 @@
     --primary-text-hover: #328636;
 }
 
-/* Universal Reset */
+/* Universal Reset & Layout */
 *,
 *::before,
 *::after {
@@ -27,10 +27,13 @@ body {
     color: var(--primary-text-color);
 }
 
+main {
+    margin: 0 3rem;
+}
+
 /* Navigation Bar/Buttons */
 .navigation__buttons {
     display: flex;
-    justify-content: flex-start;
     padding: 2rem 0;
     margin-left: 10rem;
 }
@@ -42,8 +45,31 @@ body {
     border-style: none;
     font-size: 2rem;
     padding: 2rem 3rem;
+    margin-right: 2rem;
     transition: all .4s;
 }
 .navigation__button:hover{
+    color: var(--primary-text-hover);
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+label {
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.breakeven-price__text {
+    align-self: center;
+    border: 3px solid var(--primary-text-hover);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    font-weight: 700;
     color: var(--primary-text-hover);
 }
