@@ -3,7 +3,7 @@ import Stock from "../modules/stock.js";
 let form = document.querySelector(".stock_form");
 let display_price = document.querySelector(".breakeven-price__text");
 
-form.addEventListener("change", (event) => {
+form.addEventListener("input", (event) => {
     event.preventDefault();
     let formData = new FormData(document.querySelector(".stock_form"));
 
