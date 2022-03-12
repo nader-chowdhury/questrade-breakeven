@@ -15,6 +15,7 @@ form.addEventListener("input", (event) => {
         formData.get("exchange"),
         formData.get("type"),
         );
-    display_price.textContent= `${stock.break_even_price_formatted} or ${stock.break_even_price}`;
+    display_price.textContent = `${stock.break_even_price_formatted} or ${stock.break_even_price}`;
+    document.querySelector(".calculation__commission").textContent =`Commission: ${stock.type}`;
     }
 );
