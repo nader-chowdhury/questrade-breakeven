@@ -15,7 +15,10 @@ form.addEventListener("input", (event) => {
         formData.get("exchange"),
         formData.get("type"),
         );
-    display_price.textContent = `${stock.break_even_price_formatted} or ${stock.break_even_price}`;
-    document.querySelector(".calculation__commission").textContent =`Commission: ${stock.type}`;
+    display_price.textContent = `${stock.break_even_price_formatted}`;
+    document.querySelector(".calculation__commission").textContent = stock.total_commission;
+    document.querySelector(".calculation__ecn").textContent = stock.total_ecn;
+    document.querySelector(".calculation__purchase").textContent = stock.price * stock.quantity;
+    document.querySelector(".calculation__breakeven").textContent = `(${stock.total_commission} + ${stock.total_ecn} + ${stock.quantity * stock.price}) / ${stock.quantity}`;
     }
 );

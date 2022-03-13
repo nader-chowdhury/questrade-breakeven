@@ -19,7 +19,7 @@
         <main>
             <form class="stock_form">
                 <label> Symbol:
-                    <input type="text" name="symbol">
+                    <input type="text" name="symbol" autocomplete="off">
                 </label>
                 <label> Purchase Price:
                     <input type="number" step="0.01" name="purchase_price">
@@ -60,9 +60,18 @@
                 </label>
                 <p class="breakeven-price__text">$0.00</p>
             </form>
-            <div class="calculation__canvas">
-               <p class="calculation__commission">Commission:</p> 
-            </div>
+            <section class="calculation__section">
+                <div class="calculation__text">
+                    <h3>COMMISSION</h3>
+                    <div class="calculation__commission"></div>
+                    <h3>ECN</h3>
+                    <div class="calculation__ecn"></div>
+                    <h3>PURCHASE COST</h3>
+                    <div class="calculation__purchase"></div>
+                    <h3>BREAKEVEN CALCULATION</h3>
+                    <div class="calculation__breakeven"></div>
+                </div>
+            </section>
         </main>
         <footer>
             <p class="footer__text">Nader Chowdhury &copy</p> 

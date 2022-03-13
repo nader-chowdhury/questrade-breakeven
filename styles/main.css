@@ -88,13 +88,31 @@ form {
 }
 
 label {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 
 input,
 select {
     font-size: 2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: .15rem solid green;
+    background-color: white;
+}
+input:focus,
+select:focus {
+    background-color: lightblue;
+    border-color: black;
+}
+input:focus-visible,
+select:focus-visible {
+    outline: none;
+}
+
+option {
+    color: black;
+    background-color: white;
 }
 
 .breakeven-price__text {
@@ -107,12 +125,30 @@ select {
     color: white;
 }
 
+.floating__text {
+    position: absolute;
+}
 /* Calculation Proof */ 
-.calculation__canvas {
+.calculation__section {
     flex-grow: 1;
     font-family: "Roboto Slab";
     margin-bottom: 2rem;
-    background-color: rgb(249, 249, 250);
+    background-color: white;
+    border: 1px solid lightgray;
+    border-top: .4rem solid var(--primary-text-hover);
+    font-size: 3.5rem;
+    transition: all .5s;
+}
+.calculation__section:hover {
+    box-shadow: 1rem 1rem 2rem 1rem hsl(0deg 0% 88% / 90%);
+}
+.calculation__section div {
+    margin-left: 3rem;
+}
+
+.calculation__text {
+    margin: 2rem;
+    height: 100%;
 }
 
 /* Footer */
