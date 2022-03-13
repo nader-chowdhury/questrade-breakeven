@@ -83,7 +83,6 @@ form {
     display: flex;
     width: 50vw;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-evenly;
 }
 
@@ -125,9 +124,6 @@ option {
     color: white;
 }
 
-.floating__text {
-    position: absolute;
-}
 /* Calculation Proof */ 
 .calculation__section {
     flex-grow: 1;
