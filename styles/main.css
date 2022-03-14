@@ -23,7 +23,7 @@ body {
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     flex-direction: column;
     color: var(--primary-text-color);
 }
@@ -147,7 +147,7 @@ select:focus-visible {
     background-color: white;
     border: 1px solid lightgray;
     border-top: .4rem solid var(--primary-text-hover);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     transition: all .5s;
 }
 .calculation__section:hover {
