@@ -86,32 +86,48 @@ form {
     justify-content: space-evenly;
 }
 
+.form__text {
+    position: relative;
+    width: 50%;
+}
+
 label {
-    font-size: 2.5rem;
-    font-weight: 400;
+    pointer-events: none;
+    color: grey;
+    cursor: text;
+    position: absolute;
+    padding: 0 0.5rem;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .1s;
+}
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+select ~ label {
+    top: -5%;
+    background-color: white;
+    font-size: 1.5rem;
+    color: var(--primary-text-hover);
 }
 
 input,
 select {
-    font-size: 2rem;
     padding: 1rem;
     border-radius: .5rem;
-    border: .15rem solid green;
+    border: .15rem solid grey;
     background-color: white;
+    font-size: inherit;
+    width: 100%;
 }
 input:focus,
 select:focus {
-    background-color: lightblue;
-    border-color: black;
+    border-color: var(--primary-text-hover);
+    color: var(--primary-text-hover);
 }
 input:focus-visible,
 select:focus-visible {
     outline: none;
-}
-
-option {
-    color: var(--primary-text-color);
-    background-color: white;
 }
 
 .breakeven-price__text {
