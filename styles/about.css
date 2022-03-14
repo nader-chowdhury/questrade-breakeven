@@ -32,6 +32,11 @@ table {
     font-size: 2.5rem;
 }
 
+th,
+td {
+    background-color: white;
+}
+
 caption,
 table,
 th,
