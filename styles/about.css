@@ -5,9 +5,11 @@ main {
     margin: 0 10rem;
 }
 
+a:link,
 a:visited {
-    color: black;
+    color: #328636;
     text-decoration: none;
+    font-weight: 700;
 }
 
 p:not(.footer__text) {
@@ -36,7 +38,7 @@ td {
     text-align: center;
     padding: 2rem;
     border-collapse: collapse;
-    border: 1px solid darkgreen;
+    border: 1px solid #328636;
 }
 
 caption {
