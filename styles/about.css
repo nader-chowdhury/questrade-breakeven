@@ -1,0 +1,51 @@
+/* General */
+main {
+    flex-direction: column;
+    background-color: rgb(248, 248, 250);
+    margin: 0 10rem;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+p:not(.footer__text) {
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-family: "Roboto Slab", sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+/* Table */
+table {
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
+
+caption,
+table,
+th,
+td {
+    text-align: center;
+    padding: 2rem;
+    border-collapse: collapse;
+    border: 1px solid darkgreen;
+}
+
+caption {
+    font-weight: 700;
+    border-bottom: none;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+/* Utility Class */
+.bold__text {
+    font-weight: 700;
+}
